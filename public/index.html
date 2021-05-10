@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Artesanato Coxinense - Cadastro</title>
+  <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-analytics.js"></script>
+  <script src="./src/js/config.js"></script>
+
+  <link rel="stylesheet" href="./src/css/style.css">
+</head>
+
+<body>
+
+  <header>
+    <h1 class="titulo">Artesanato Coxinense</h1>
+  </header>
+  <main>
+
+    <form id="form__cadastro" >
+      <fieldset id="form__entradas">
+        <legend>Cadastro de Artesanto</legend>
+
+        <label for="artesanato">Artesanato</label>
+        <input type="text" id="artesanato" name="artesanato">
+
+        <label for="artesao">Artesã(o)</label>
+        <input type="text" id="artesao" name="artesao">
+
+        <label for="descricao">Descrição</label>
+        <textarea id="descricao" name="descriao"> </textarea>
+
+        <label for="valor">Valor</label>
+        <input type="number" step="0.01" id="valor" name="valor">
+        
+        
+
+        <button class="botao__primario"> Salvar artesanato </button>
+
+      </fieldset>
+
+    </form>
+
+  </main>
+  <footer>
+    <span>Plataforma de venda de artesanato da cidade de Coxim - Mato Grosso do Sul</span>
+    <span class="copyright">Direitos Reservados</span>
+  </footer>
+
+  <script src="./src/js/cadastro.js" type="module"></script>
+</body>
+
+</html>
