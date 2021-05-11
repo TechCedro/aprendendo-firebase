@@ -11,7 +11,7 @@
   <script src="./src/js/config.js"></script>
 
   <link rel="stylesheet" href="./src/css/style.css">
-  <link rel="stylesheet" href="./src/css/listagem.css">
+  <link rel="stylesheet" href="./src/css/cadastro.css">
 </head>
 
 <body>
@@ -21,9 +21,29 @@
   </header>
   <main>
 
-    <ol id="lista__artesanatos">
-     
-    </ol>
+    <form id="form__cadastro" >
+      <fieldset id="form__entradas">
+        <legend>Cadastro de Artesanto</legend>
+
+        <label for="artesanato">Artesanato</label>
+        <input type="text" id="artesanato" name="artesanato">
+
+        <label for="artesao">Artesã(o)</label>
+        <input type="text" id="artesao" name="artesao">
+
+        <label for="descricao">Descrição</label>
+        <textarea id="descricao" name="descriao"> </textarea>
+
+        <label for="valor">Valor</label>
+        <input type="number" step="0.01" id="valor" name="valor">
+        
+        
+
+        <button class="botao__primario"> Salvar artesanato </button>
+
+      </fieldset>
+
+    </form>
 
   </main>
   <footer>
@@ -31,7 +51,7 @@
     <span class="copyright">Direitos Reservados</span>
   </footer>
 
-  <script src="./src/js/listagem.js" type="module"></script>
+  <script src="./src/js/cadastro.js" type="module"></script>
 </body>
 
 </html>

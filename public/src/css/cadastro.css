@@ -1,0 +1,28 @@
+#form__cadastro {
+    width: 80%;
+    padding: 12px;
+}
+ #form__entradas {
+    border-radius: 4px;
+    border-color: var(--cor-verde-escuro);
+    display: flex;
+    flex-direction: column;
+ }
+
+ #form__entradas label {
+     font-size: 12px;
+     font-weight: bold;
+ }
+
+ #form__entradas input,
+ #form__entradas textarea {
+     border-color: var(--cor-verde-claro);
+     margin-bottom: 12px;
+     border-radius: 8px;
+     padding: 8px;
+ }
+
+ #form__entradas button {
+     width: 200px;
+     padding: 8px;
+ }
