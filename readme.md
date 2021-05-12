@@ -2,6 +2,8 @@
 
 Projeto desenvolvido nos videos "Aprendendo Firebase"
 
+Videos: [YouTube](https://www.youtube.com/playlist?list=PLRopgUQxcZRUtFBwTEjRptoXwbA-nChvu)
+
 Técnologias utilizadas:
 - JavaScript
 - HTML
