@@ -1,4 +1,4 @@
-import { artesanatos } from './service.js'
+import { artesanatos } from '../servicos/service.js'
 
 const form = document.querySelector("#form__cadastro");
 

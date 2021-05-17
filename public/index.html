@@ -21,6 +21,24 @@
   </header>
   <main>
 
+    <form id="form__filtros">
+
+      <fieldset class="fieldset__padrao" id="filtros__entradas">
+        <legend>Filtros</legend>
+
+        <label for="artesanato">Artesanato</label>
+        <input type="text" id="artesanato" name="artesanato">
+
+        <label for="artesao">Artesã(o)</label>
+        <input type="text" id="artesao" name="artesao">
+
+        <button id="botao__filtrar" class="botao__primario"> Filtrar </button>
+
+      </fieldset>
+
+    </form>
+    
+
     <ol id="lista__artesanatos">
      
     </ol>
@@ -31,7 +49,7 @@
     <span class="copyright">Direitos Reservados</span>
   </footer>
 
-  <script src="./src/js/listagem.js" type="module"></script>
+  <script src="./src/js/paginas/listagem.js" type="module"></script>
 </body>
 
 </html>

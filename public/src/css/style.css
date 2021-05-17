@@ -1,6 +1,6 @@
 :root {
     --header-height: 60px;
-    --footer-height:40px;
+    --footer-height: 40px;
     --cor-verde-claro: #40a54d;
     --cor-verde-escuro: #00592d;
 }
@@ -24,7 +24,7 @@ header {
     padding: 4px;
 }
 
-h1, h2, h3{
+h1, h2, h3 {
     margin: 0;
 }
 
@@ -36,8 +36,9 @@ main {
     align-items: center;
     background: #f3f3f3;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    padding:20px;
+    padding: 20px;
     min-height: calc(100% - (var(--header-height) + var(--footer-height)));
 }
 
@@ -62,4 +63,27 @@ footer {
     border-color: var(--cor-verde-escuro);
     border-radius: 8px;
     color: white;
+    cursor: pointer;
+}
+
+.botao__primario:hover {
+    background: var(--cor-verde-claro);
+    border-color: var(--cor-verde-claro);
+}
+
+.fieldset__padrao {
+    border-radius: 4px;
+    border-color: var(--cor-verde-escuro);
+}
+
+.fieldset__padrao label {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+.fieldset__padrao input,
+.fieldset__padrao textarea {
+    border-color: var(--cor-verde-claro);
+    border-radius: 8px;
 }

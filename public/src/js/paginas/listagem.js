@@ -1,6 +1,16 @@
-import { artesanatos } from './service.js'
+import { pesquisar } from '../servicos/listar.js'
 
 const listaElemento = document.querySelector('#lista__artesanatos')
+const filtrosFormElementos = document.querySelector('#form__filtros')
+
+const corrigirFiltros = (filtros) => {
+    for (let filtro in filtros) {
+        filtros[filtro] = filtros[filtro].trim();
+    }
+
+    console.log(filtros)
+}
+
 
 const criarItem = (produto) => {
 
@@ -20,17 +30,31 @@ const criarItem = (produto) => {
 
 }
 
+const obterProdutos = async (filtros = {}) => {
+    corrigirFiltros(filtros)
+    const arrayProdutos = await pesquisar(filtros)
+    renderizarLista(arrayProdutos)
+}
 
 const renderizarLista = (arrayProdutos) => {
 
     listaElemento.innerHTML = arrayProdutos.map((produto) => {
         return criarItem(produto)
-    })
+    }).join(" ")
 }
 
 
-artesanatos.get().then((querySnapshot) => {
-    const arrayProdutos = querySnapshot.docs.map(item => item.data());
-    renderizarLista(arrayProdutos)
-});
 
+
+filtrosFormElementos.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const filtros = {
+        artesanato: filtrosFormElementos.artesanato.value,
+        artesao: filtrosFormElementos.artesao.value
+    }
+    obterProdutos(filtros)
+})
+
+
+obterProdutos()
