@@ -7,13 +7,9 @@ const corrigirFiltros = (filtros) => {
     for (let filtro in filtros) {
         filtros[filtro] = filtros[filtro].trim();
     }
-
-    console.log(filtros)
 }
 
-
 const criarItem = (produto) => {
-
     return `
     <li class="item__artesanato">
         <div class="item__conteudo">
@@ -27,7 +23,6 @@ const criarItem = (produto) => {
         </div>
     </li>
 `
-
 }
 
 const obterProdutos = async (filtros = {}) => {
@@ -37,14 +32,10 @@ const obterProdutos = async (filtros = {}) => {
 }
 
 const renderizarLista = (arrayProdutos) => {
-
     listaElemento.innerHTML = arrayProdutos.map((produto) => {
         return criarItem(produto)
     }).join(" ")
 }
-
-
-
 
 filtrosFormElementos.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -55,6 +46,5 @@ filtrosFormElementos.addEventListener('submit', (event) => {
     }
     obterProdutos(filtros)
 })
-
 
 obterProdutos()

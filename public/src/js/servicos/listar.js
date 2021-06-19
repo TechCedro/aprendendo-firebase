@@ -8,7 +8,6 @@ const criarQueryAplicandoFiltros = (filtros) => {
     }
 
     return query;
-
 }
 
 export const pesquisar = async (filtros) => {
