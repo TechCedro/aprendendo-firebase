@@ -81,9 +81,7 @@ footer {
     font-weight: bold;
 }
 
-
-.fieldset__padrao input,
-.fieldset__padrao textarea {
+.fieldset__padrao input, .fieldset__padrao textarea {
     border-color: var(--cor-verde-claro);
     border-radius: 8px;
 }

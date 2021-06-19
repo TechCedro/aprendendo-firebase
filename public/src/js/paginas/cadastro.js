@@ -2,12 +2,12 @@ import { artesanatos } from '../servicos/service.js'
 
 const form = document.querySelector("#form__cadastro");
 
-form.addEventListener('submit', (event)=> {
+form.addEventListener('submit', (event) => {
 
     event.preventDefault();
 
     let novoProduto = {
-        artesanato : form.artesanato.value,
+        artesanato: form.artesanato.value,
         artesao: form.artesao.value,
         descricao: form.descricao.value,
         valor: form.valor.value
@@ -15,10 +15,10 @@ form.addEventListener('submit', (event)=> {
     console.log(novoProduto)
     artesanatos.add(novoProduto).then((docRef) => {
         form.reset();
-       alert(`Cadastro do produto ${novoProduto.artesanato} ocorreu com sucesso!`)
+        alert(`Cadastro do produto ${novoProduto.artesanato} ocorreu com sucesso!`)
     })
-    .catch((error) => {
-        alert(`Cadastro do produto ${novoProduto.artesanato} não pode ser concluido`)
-        console.error("Error adding document: ", error);
-    });
+        .catch((error) => {
+            alert(`Cadastro do produto ${novoProduto.artesanato} não pode ser concluido`)
+            console.error("Error adding document: ", error);
+        });
 })
