@@ -3,6 +3,9 @@ import { pesquisar } from '../servicos/listar.js'
 const listaElemento = document.querySelector('#lista__artesanatos')
 const filtrosFormElementos = document.querySelector('#form__filtros')
 
+const botaoProximo = document.querySelector('#botao__proximo')
+const botaoAnterior = document.querySelector('#botao__anterior')
+
 const corrigirFiltros = (filtros) => {
     for (let filtro in filtros) {
         filtros[filtro] = filtros[filtro].trim();
@@ -25,10 +28,17 @@ const criarItem = (produto) => {
 `
 }
 
-const obterProdutos = async (filtros = {}) => {
+const obterProdutos = async (tipo) => {
+    const filtros = {
+        artesanato: filtrosFormElementos.artesanato.value,
+        artesao: filtrosFormElementos.artesao.value
+    }
+
     corrigirFiltros(filtros)
-    const arrayProdutos = await pesquisar(filtros)
-    renderizarLista(arrayProdutos)
+    const arrayProdutos = await pesquisar(filtros, tipo)
+
+    if (tipo === "normal") renderizarLista(arrayProdutos)
+    else if(arrayProdutos.length)  renderizarLista(arrayProdutos)
 }
 
 const renderizarLista = (arrayProdutos) => {
@@ -40,11 +50,17 @@ const renderizarLista = (arrayProdutos) => {
 filtrosFormElementos.addEventListener('submit', (event) => {
     event.preventDefault();
 
-    const filtros = {
-        artesanato: filtrosFormElementos.artesanato.value,
-        artesao: filtrosFormElementos.artesao.value
-    }
-    obterProdutos(filtros)
+    obterProdutos("normal")
 })
 
-obterProdutos()
+botaoProximo.addEventListener('click', () => {
+
+    obterProdutos("proximo")
+})
+
+botaoAnterior.addEventListener('click', () => {
+
+    obterProdutos("anterior")
+})
+
+obterProdutos("normal")
