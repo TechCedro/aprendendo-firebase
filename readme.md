@@ -27,6 +27,8 @@ Técnologias utilizadas:
 * [Firestore Add](https://firebase.google.com/docs/firestore/manage-data/add-data)
 * [Firestore Get](https://firebase.google.com/docs/firestore/quickstart#read_data)
 * [Firestore Where](https://firebase.google.com/docs/firestore/query-data/queries#simple_queries)
+* [Firestore Cursores de Paginação](https://firebase.google.com/docs/firestore/query-data/query-cursors)
+* [Firestore orderBy](https://firebase.google.com/docs/firestore/query-data/order-limit-data)
 
 ### JavaScript
 * [JavaScript - Event Listner](https://www.mundojs.com.br/2019/06/25/javascript-basico-eventos-no-javascript-parte-2/)
@@ -40,7 +42,9 @@ Técnologias utilizadas:
 * [JavaScript - .trim()](https://www.devmedia.com.br/javascript-trim-removendo-espacos-desnecessarios/39685)
 * [JavaScript - Parâmetros default em function](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Functions/Default_parameters)
 * [JavaScript - Callbacks, Promises e Async/Await ](https://www.youtube.com/watch?v=7Bs4-rqbCQc)
-
+* [JavaScript - instanceof](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/instanceof)
+* [JavaScript - swtich](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/switch )
+* [JavaScript - addEventListener](https://developer.mozilla.org/pt-BR/docs/Web/API/EventTarget/addEventListener)
 
 ### CSS
 * [CSS - Variáveis](https://www.felipefialho.com/blog/os-superpoderes-das-variaveis-nativas-do-css/)
