@@ -22,6 +22,7 @@ header {
     display: flex;
     height: var(--header-height);
     padding: 4px;
+    justify-content: space-between;
 }
 
 h1, h2, h3 {
@@ -84,4 +85,25 @@ footer {
 .fieldset__padrao input, .fieldset__padrao textarea {
     border-color: var(--cor-verde-claro);
     border-radius: 8px;
+}
+
+.menu {
+    padding-right: 8px;
+}
+
+.menu__item {
+    padding: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    color: white;
+    background: var(--cor-verde-escuro);
+    border-radius: 4px;
+    transition: background 500ms, color 300ms;
+    will-change: background, color;
+}
+
+.menu__item:hover {
+    background: white;
+    color: var(--cor-verde-claro);
+    border-radius: 4px;
 }
