@@ -2,9 +2,18 @@
 
 Projeto desenvolvido nos videos "Aprendendo Firebase"
 
-Videos: [YouTube](https://www.youtube.com/playlist?list=PLRopgUQxcZRUtFBwTEjRptoXwbA-nChvu)
+Videos: [Playlist Complete](https://www.youtube.com/playlist?list=PLRopgUQxcZRUtFBwTEjRptoXwbA-nChvu)
+1. [O que é firebase? - Criando conta e configuração inicial](https://www.youtube.com/watch?v=VXgVctvIa4Y)
+2. [Base do projeto, estilo e estrutura](https://www.youtube.com/watch?v=lEYGwjptrHA)
+3. [Cadastro - Parte 1 - Formulário HTML e estilização CSS](https://www.youtube.com/watch?v=9Lz3PCWvLWQ)
+4. [Cadastro - Parte 2 - Salvando dado no firebase](https://www.youtube.com/watch?v=jni8ctQk1vI)
+5. [Criando tela de listagem e obtendo dados do Firebase](https://www.youtube.com/watch?v=pVuya6IGM80)
+6. [Filtros - Parte 1- Criando os filtros + reuso de estilos](https://www.youtube.com/watch?v=nBpTLurGNtg)
+7. [Filtros - Parte 2 - Aplicando filtros e separação de conceitos](https://www.youtube.com/watch?v=gDo_frFjYv8)
+8. [Paginação](https://www.youtube.com/watch?v=PnGYXFS7Qsw)
 
-Técnologias utilizadas:
+
+##### Técnologias utilizadas:
 - JavaScript
 - HTML
 - CSS
