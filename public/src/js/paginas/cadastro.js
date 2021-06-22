@@ -1,8 +1,11 @@
 import { artesanatos } from '../servicos/service.js'
+import Carregamento from '../componentes/carregamento.js'
 
 const form = document.querySelector("#form__cadastro");
 
 form.onsubmit = (event) => {
+    Carregamento.exibir()
+
     event.preventDefault();
     let novoProduto = {
         artesanato: form.artesanato.value,
@@ -18,4 +21,7 @@ form.onsubmit = (event) => {
             alert(`Cadastro do produto ${novoProduto.artesanato} não pode ser concluido`)
             console.error("Error adding document: ", error);
         });
-})
+
+        
+    Carregamento.esconder()
+}

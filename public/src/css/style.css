@@ -107,3 +107,39 @@ footer {
     color: var(--cor-verde-claro);
     border-radius: 4px;
 }
+
+.carregando {
+    position: absolute;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.8);
+    font-weight: 700;
+    color: white;
+    width: 100%;
+    height: 100%;
+    top: 0;
+  }
+
+  .carregando--ativo {
+      display: flex;
+  }
+  .carregando__icone {
+      width: 40px;
+      height: 40px;
+      border-radius: 100%;
+      border: 5px solid var(--cor-verde-claro);
+      border-left-color: transparent;
+      animation: rotacao 1s infinite linear;
+  }
+
+  @keyframes rotacao {
+      from {
+          transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+    }
+  }

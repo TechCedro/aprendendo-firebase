@@ -1,4 +1,5 @@
 import { pesquisar } from '../servicos/listar.js'
+import Carregamento from '../componentes/carregamento.js'
 
 const listaElemento = document.querySelector('#lista__artesanatos')
 const filtrosFormElementos = document.querySelector('#form__filtros')
@@ -30,10 +31,14 @@ const criarItem = (produto) => {
 `
 }
 const obterProdutos = async (tipo) => {
+    Carregamento.exibir()
+    
     const filtros = montarFiltros();
     const arrayProdutos = await pesquisar(filtros, tipo)
     if (tipo === "normal") renderizarLista(arrayProdutos)
     else if (arrayProdutos.length) renderizarLista(arrayProdutos)
+
+    Carregamento.esconder()
 }
 
 const renderizarLista = (arrayProdutos) => {
