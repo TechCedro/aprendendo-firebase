@@ -61,15 +61,20 @@ footer {
 
 .botao__primario {
     background: var(--cor-verde-escuro);
-    border-color: var(--cor-verde-escuro);
+    border: 2px solid var(--cor-verde-escuro);
     border-radius: 8px;
     color: white;
     cursor: pointer;
+    box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.2);
+    transition: box-shadow 300ms ease, background 300ms ease;
+    will-change: box-shadow, background;
+
 }
 
 .botao__primario:hover {
     background: var(--cor-verde-claro);
     border-color: var(--cor-verde-claro);
+    box-shadow: 0px 0px 8px 4px rgba(0,0,0,0.2);
 }
 
 .fieldset__padrao {

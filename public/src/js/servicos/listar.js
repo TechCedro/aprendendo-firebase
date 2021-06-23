@@ -1,5 +1,5 @@
 import { artesanatos } from './service.js'
-
+import PaginacaoEnum from '../objetos/PaginacaoEnum.js'
 let ultimoElemento = 0
 let primerioElemento = 0
 
@@ -14,13 +14,13 @@ const criarQueryAplicandoFiltros = (filtros) => {
 
 const aplicarPaginacao = (query, tipo) => {
     switch (tipo) {
-        case "normal":
+        case PaginacaoEnum.NORMAL:
             return query.limit(3);
-        case "proximo":
+        case PaginacaoEnum.PROXIMO:
             return query.startAfter(ultimoElemento).limit(3);
-        case "anterior":
+        case PaginacaoEnum.ANTERIOR:
             return query.endBefore(primerioElemento).limitToLast(3);
-        default:
+        case PaginacaoEnum.TODOS:
             return query;
     }
 }
